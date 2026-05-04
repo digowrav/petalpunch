@@ -117,6 +117,7 @@
       
 
       <!-- Stats bar -->
+      <div class="stats-bar-wrapper">
       <div class="stats-bar">
         <div class="stat">
           <span class="stat-label">nodes explored</span>
@@ -131,6 +132,8 @@
           <span class="stat-value" id="stat-depth">—</span>
         </div>
       </div>
+      <button class="stats-info-btn" onclick="toggleInfoPanel()" title="What do these mean?">?</button>
+    </div>
       <!-- Tree toggle button -->
 <button class="tree-toggle-btn" id="btn-tree-toggle" onclick="toggleTreePanel()">
   <span class="tree-icon">🌳</span>
@@ -191,6 +194,78 @@
     </p>
   </div>
 </div>
+<div class="info-overlay" id="info-overlay" onclick="toggleInfoPanel()"></div>
+
+<div class="info-panel" id="info-panel">
+  <div class="info-panel-header">
+    <div class="info-panel-title">What's This?</div>
+    <button class="info-panel-close" onclick="toggleInfoPanel()">close</button>
+  </div>
+  
+  <div class="info-panel-content">
+
+    <div class="info-card">
+      <div class="info-card-header">
+        <div class="info-card-icon nodes">🔍</div>
+        <div class="info-card-title">Nodes Explored</div>
+      </div>
+      <div class="info-card-body">
+        The number of possible future board states the AI evaluated before making its move. Each "node" is one possible arrangement of the board that the AI considered.
+        <div class="info-card-example">
+          <strong>Example:</strong> If nodes = 5,631, the AI looked at 5,631 different possible game positions to find the best move. More nodes = the AI thought harder.
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-card-header">
+        <div class="info-card-icon pruned">✂</div>
+        <div class="info-card-title">Pruned</div>
+      </div>
+      <div class="info-card-body">
+        The number of branches the AI skipped because it couldn't possibly lead to a better outcome. This is alpha-beta pruning, a smart shortcut that gets the same perfect answer while doing less work.
+        <div class="info-card-example">
+          <strong>Example:</strong> If pruned = 2,138, the AI was smart enough to skip 2,138 game states it didn't need to check. Higher pruning = more efficient search.
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="info-card-header">
+        <div class="info-card-icon depth">📏</div>
+        <div class="info-card-title">Depth</div>
+      </div>
+      <div class="info-card-body">
+        How many moves ahead the AI looked. A depth of 9 means it searched all the way to the end of every possible game — it can see the entire future. A depth of 3 means it only looked 3 moves ahead.
+        <div class="info-card-example">
+          <strong>Easy (Q-learning):</strong> depth 0 — uses learned experience, not search<br>
+          <strong>Medium (minimax):</strong> depth 3 — looks 3 moves ahead<br>
+          <strong>Hard (α-β pruning):</strong> depth 9 — sees everything
+        </div>
+      </div>
+    </div>
+
+    <div class="info-difficulty-note">
+      <strong>Why do these numbers change?</strong> Each difficulty uses a different AI algorithm. Easy mode uses Q-learning (a neural-network-like approach that learned from playing 100,000+ games against itself). Medium uses minimax with limited depth. Hard uses full minimax with alpha-beta pruning (it plays perfectly and can never lose).
+    </div>
+
+  </div>
+</div>
+<script>
+function toggleInfoPanel() {
+  const panel = document.getElementById('info-panel');
+  const overlay = document.getElementById('info-overlay');
+  if (!panel) return;
+  const isVisible = panel.classList.contains('visible');
+  if (isVisible) {
+    panel.classList.remove('visible');
+    if (overlay) overlay.classList.remove('visible');
+  } else {
+    panel.classList.add('visible');
+    if (overlay) overlay.classList.add('visible');
+  }
+}
+</script>
   <script src="js/tree-visualizer.js"></script>
   <script src="js/game.js"></script>
 </body>
