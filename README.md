@@ -153,7 +153,7 @@ The Q-table maps (state, action) pairs to expected future rewards. For tic-tac-t
 
 After each move, the agent updates its Q-value using the Bellman equation:
 
-$$Q(s, a) ← Q(s, a) + α · [r + γ · max_a' Q(s', a') - Q(s, a)]$$
+$$Q(s, a) ← Q(s, a) + α · [r + γ · max_{a'} Q(s', a') - Q(s, a)]$$
 
 
 Where:
