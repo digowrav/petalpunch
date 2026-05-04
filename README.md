@@ -4,6 +4,7 @@ A tic-tac-toe game powered by three distinct AI algorithms that demonstrate adve
 
 **[Play it live →](https://divyagow.github.io/petalpunchXO/)**
 
+
 Built by [digowrav](https://github.com/digowrav) 
 ---
 
@@ -152,19 +153,18 @@ The Q-table maps (state, action) pairs to expected future rewards. For tic-tac-t
 
 After each move, the agent updates its Q-value using the Bellman equation:
 
-```
-Q(s, a) ← Q(s, a) + α · [r + γ · max_a' Q(s', a') - Q(s, a)]
-```
+$$Q(s, a) ← Q(s, a) + α · [r + γ · max_a' Q(s', a') - Q(s, a)]$$
+
 
 Where:
-- s = current state, a = action taken
-- r = immediate reward received
-- s' = next state after taking action a
-- α = learning rate (0.1) -> how fast the agent updates its beliefs
-- γ = discount factor (0.95) —> how much it values future vs immediate rewards
-- max_a' Q(s', a') = the best Q-value achievable from the next state
+- $s$ = current state, a = action taken
+- $r$ = immediate reward received
+- $s'$ = next state after taking action a
+- $\alpha$ = learning rate (0.1) $\rightarrow$ how fast the agent updates its beliefs
+- $\gamma$ = discount factor (0.95) $\rightarrow$  how much it values future vs immediate rewards
+- $\text{max}_{a'} Q(s', a')$ = the best Q-value achievable from the next state
 
-**Intuition:** The term `r + γ · max Q(s', a')` is the "target" (what the agent thinks the total future reward should be). The term `Q(s, a)` is the current estimate. The update nudges the current estimate toward the target by a step of size α.
+**Intuition:** The term $r + γ · \text{max} Q(s', a')$ is the "target" (what the agent thinks the total future reward should be). The term $Q(s, a)$ is the current estimate. The update nudges the current estimate toward the target by a step of size α.
 
 **Exploration vs exploitation (epsilon-greedy):**
 
