@@ -493,5 +493,5 @@ if __name__ == '__main__':
     export_q_table(agent, 'q_table.json')
     export_training_history(agent, 'training_history.json')
     
-    print("\n  Done! Copy q_table.json to your petalpunchXO/assets/ folder.")
+    print("\n  Done! Copy q_table.json to your petalpunch/assets/ folder.")
     print("  The JS frontend will load this file to power the RL agent.")

@@ -1,5 +1,5 @@
 /**
- * Game Tree Visualizer for petalpunchXO
+ * Game Tree Visualizer for petalpunch
  * 
  * Renders an interactive, expandable minimax game tree.
  * Starts showing only 2 levels, with "expand" buttons to go deeper.

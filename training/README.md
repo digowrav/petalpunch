@@ -1,6 +1,6 @@
 # Training Pipeline
 
-This directory contains the Python Q-learning training pipeline for petalpunchXO.
+This directory contains the Python Q-learning training pipeline for petalpunch.
 
 ## How It Works
 

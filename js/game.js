@@ -1,5 +1,5 @@
 /**
- * petalpunchXO — AI powered by Minimax, Alpha-Beta Pruning, and Q-Learning
+ * petalpunch — AI powered by Minimax, Alpha-Beta Pruning, and Q-Learning
  * 
  * Three AI strategies demonstrating different AI paradigms:
  * - Easy:   Q-Learning agent (learned from self-play via reinforcement learning)

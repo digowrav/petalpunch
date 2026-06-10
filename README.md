@@ -1,8 +1,8 @@
-# petalpunchXO 🌸
+# petalpunch 🌸
 
 A tic-tac-toe game powered by three distinct AI algorithms that demonstrate adversarial search, optimization, and reinforcement learning in a playable web experience.
 
-**[Play it live →](https://divyagow.github.io/petalpunchXO/)**
+**[Play it live →](https://divyagow.github.io/petalpunch/)**
 
 
 Built by [digowrav](https://github.com/digowrav) 
@@ -247,7 +247,7 @@ Click the **?** button next to the stats bar for detailed explanations of each m
 ## Project Structure
 
 ```
-petalpunchXO/
+petalpunch/
 ├── training/                    ← Python RL pipeline
 │   ├── train_agent.py           ← Q-learning training script
 │   ├── requirements.txt
@@ -277,7 +277,7 @@ petalpunchXO/
 **Play the game:**
 
 ```bash
-cd petalpunchXO
+cd petalpunch
 python3 -m http.server 8080
 # open http://localhost:8080
 ```
