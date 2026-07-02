@@ -2,7 +2,7 @@
 
 A tic-tac-toe game powered by three distinct AI algorithms that demonstrate adversarial search, optimization, and reinforcement learning in a playable web experience.
 
-**[Play it live →]([https://divyagow.github.io/petalpunch/](https://digowrav.github.io/petalpunch/))**
+**[Play it live →](https://digowrav.github.io/petalpunch/)**
 
 
 Built by [digowrav](https://github.com/digowrav) 
