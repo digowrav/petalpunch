@@ -522,11 +522,14 @@ html, body {
 /* ===== STATS BAR ===== */
 .stats-bar {
   display: flex;
-  gap: 28px;
-  padding: 12px 24px;
+  justify-content: space-around;
+  gap: clamp(12px, 4vw, 28px);
+  padding: 12px clamp(12px, 4vw, 24px);
   background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.06);
+  max-width: 100%;
+  min-width: 0;
 }
 
 .stat {
@@ -534,6 +537,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 2px;
+  min-width: 0;
 }
 
 .stat-label {
@@ -544,7 +548,7 @@ html, body {
 }
 
 .stat-value {
-  font-size: 16px;
+  font-size: clamp(13px, 3.5vw, 16px);
   color: #d4c4ff;
   font-family: 'Press Start 2P', cursive;
 }
@@ -1003,7 +1007,10 @@ html, body {
 .stats-bar-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Overlay */
