@@ -4,8 +4,6 @@ A tic-tac-toe game powered by three distinct AI algorithms that demonstrate adve
 
 **[Play it live →](https://digowrav.github.io/petalpunch/)**
 
-
-Built by [digowrav](https://github.com/digowrav) 
 ---
 
 ## What This Project Demonstrates
